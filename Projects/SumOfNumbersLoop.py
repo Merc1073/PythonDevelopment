@@ -6,7 +6,7 @@ all numbers from 1 to 100 using a for loop.
 
 """
 
-# --------- my attempt ---------
+# my attempt
 sumCount = 0
 
 for i in range(100):
