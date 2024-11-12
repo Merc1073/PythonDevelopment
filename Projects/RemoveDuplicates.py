@@ -6,7 +6,7 @@ Use the count() and remove() methods to remove any duplicates.
 
 """
 
-# my solution ( I was not able to figure out how
+# my attempt ( I was not able to figure out how
 # to use the methods above to remove duplicates :< )
 duplicate_list = [1, 2, 5, 8, 5, 3, 6, 8, 6, 5, 2, 1, 6, 9, 6, 3, 4]
 print(duplicate_list)
