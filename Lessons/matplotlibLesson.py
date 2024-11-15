@@ -1,4 +1,5 @@
 """
+
 For reference, during this lesson I was having tremendous difficulty
 in getting the normal matplotlib.pyplot as plt to work, and it always gave me
 an error regarding "tcl not being installed correctly". After wasting many hours of
@@ -8,10 +9,17 @@ of displaying graphs and charts via matplotlib.use('Agg'), which seems to
 do the job well and still allows me to view the graph, albeit at the minor
 cost of creating a png file instead of a live window, which honestly may
 even be considered better than a live window, it's really cool :o
+
+
+Update (15/11/2024, 10:28am):
+
+Alrighty so I've switched to Python 3.11 to make sure that matplotlib
+works for this lesson. I've installed Conda and created a new testing
+environment so now the graphs all appear in a new window.
+This is so cool haha I love it!
+
 """
 
-import matplotlib
-matplotlib.use('Agg')  # Switch to a non-interactive backend
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -31,8 +39,7 @@ plt.xlabel("X-axis Label")
 plt.ylabel("Y-axis Label")
 plt.title("Simple Line Plot")
 
-# Save the plot as an image
-plt.savefig("plot.png")  # Saves the plot in the current directory
+plt.show()
 
 x = np.linspace(1, 10, 10)
 y = np.random.randint(1, 10, 10)
@@ -52,14 +59,15 @@ plt.xlabel("Categories")
 plt.ylabel("Values")
 figures.append(plt.gcf())
 
-plt.savefig("bar.png")
+plt.show()
 
 
 plt.figure()
 plt.pie(values, labels=categories, autopct='%1.1f%%')
 plt.title("Pie Chart")
 figures.append(plt.gcf())
-plt.savefig("pie.png")
+
+plt.show()
 
 
 plt.figure()
@@ -68,7 +76,8 @@ plt.title("Histogram")
 plt.xlabel("Bins")
 plt.ylabel("Frequency")
 figures.append(plt.gcf())
-plt.savefig("histogram.png")
+
+plt.show()
 
 
 plt.figure()
@@ -77,4 +86,5 @@ plt.title("Scatter Plot")
 plt.xlabel("X-axis")
 plt.ylabel("Y-axis")
 figures.append(plt.gcf())
-plt.savefig("scatter.png")
+
+plt.show()
